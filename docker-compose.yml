@@ -1,0 +1,26 @@
+services:
+    hath:
+        image: hath
+        container_name: hath
+        restart: on-failure:1
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                - HATH_VERSION=1.6.4
+        pull_policy: never
+        volumes:
+            - ./HatH/cache:/hath/cache
+            - ./HatH/data:/hath/data
+            - ./HatH/download:/hath/download
+            - ./HatH/log:/hath/log
+        dns:
+            - 1.1.1.1
+            - 1.0.0.1
+        environment:
+            HATH_CLIENT_ID: <REPLACE_WITH_YOUT_CLIENT_ID>
+            HATH_CLIENT_KEY: <REPLACE_WITH_YOUT_CLIENT_KEY>
+            UMASK: 0
+            TZ: <REPLACE_WITH_YOUR_TZID>
+        ports:
+            - 6969:6969/tcp
