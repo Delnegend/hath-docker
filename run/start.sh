@@ -15,7 +15,8 @@ run_application() {
         --data-dir=/hath/data                 \
         --download-dir=/hath/download         \
         --log-dir=/hath/log                   \
-        --temp-dir=/hath/tmp
+        --temp-dir=/hath/tmp                  \
+        --disable-ip-origin-check
 }
 
 # Run the application and capture its exit code
