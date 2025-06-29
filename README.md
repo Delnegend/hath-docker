@@ -2,7 +2,7 @@
 
 ## Usage:
 - Clone this repository
-- Change the environments in `docker-compose.yml`
+- Change the environments and exposed port in `docker-compose.yml`
 - `docker compose up -d --build`
 
 ## `Dockerfile` vs `Dockerfile.alpine`
