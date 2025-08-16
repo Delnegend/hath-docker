@@ -3,6 +3,7 @@ services:
         image: hath
         container_name: hath
         restart: on-failure:1
+        user: 1000:1000
         build:
             context: .
             dockerfile: Dockerfile
