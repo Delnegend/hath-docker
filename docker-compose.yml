@@ -2,7 +2,7 @@ services:
     hath:
         image: hath
         container_name: hath
-        restart: on-failure:1
+        restart: unless-stopped
         user: 1000:1000
         build:
             context: .
