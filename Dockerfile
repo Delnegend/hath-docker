@@ -23,4 +23,4 @@ RUN apt-get update && \
     mkdir -p /hath/cache /hath/data /hath/download /hath/log /hath/tmp && \
     chown -R ubuntu:ubuntu /opt/hath /hath
 
-ENTRYPOINT "/opt/hath/start.sh || (echo 'Failing, waiting 30s...' && sleep 30s && exit 1)"
+CMD ["sh","-lc","/opt/hath/start.sh || (echo 'Failing, waiting 30s...' && sleep 30s && exit 1)"]
